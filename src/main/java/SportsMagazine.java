@@ -9,6 +9,10 @@ public class SportsMagazine {
         athletes.add(new Athletes("Mariusz Pudzianowski", false, false, true));
 
         print(athletes,new CheckIfFastRun());
+
+        //lambda
+        print(athletes,c -> c.isCanDance());
+        print(athletes,c -> c.isCanHighJump());
     }
 
     private static void print(List<Athletes> athletes, CheckSkills checker){
