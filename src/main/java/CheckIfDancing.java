@@ -1,3 +1,4 @@
+/*
 public class CheckIfDancing implements CheckSkills{
 
     @Override
@@ -5,3 +6,4 @@ public class CheckIfDancing implements CheckSkills{
         return athletes.canDance;
     }
 }
+*/

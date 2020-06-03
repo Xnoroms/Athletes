@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 public class SportsMagazine {
     public static void main(String[] args) {
@@ -8,14 +9,17 @@ public class SportsMagazine {
         athletes.add(new Athletes("Robert Lewandowski", true, true, false ));
         athletes.add(new Athletes("Mariusz Pudzianowski", false, false, true));
 
-        print(athletes,new CheckIfFastRun());
+
 
         //lambda
         print(athletes,c -> c.isCanDance());
         print(athletes,c -> c.isCanHighJump());
+        print(athletes, c -> c.isCanFastRun());
     }
 
-    private static void print(List<Athletes> athletes, CheckSkills checker){
+
+    //Predicate
+    private static void print(List<Athletes> athletes, Predicate<Athletes> checker){
         for (Athletes athelete:athletes
              ) {
             if (checker.test(athelete)){
